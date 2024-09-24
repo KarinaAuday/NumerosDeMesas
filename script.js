@@ -5,6 +5,9 @@ const invitados = {
     "Carlos Rodríguez": 3,
     "Ana Martínez": 7,
     "Karina Auday": 2,
+    "Gabriel Krawiec": 1,
+    "Marcela Imach": 4,
+    "Melisa Cuant": 6,
     // Agrega más invitados aquí
 };
 

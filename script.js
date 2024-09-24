@@ -1,39 +1,43 @@
-const mesas = [
-    { nombre: 'Juan', apellido: 'Pérez', mesa: 5 },
-    { nombre: 'Ana', apellido: 'Gómez', mesa: 3 },
-    { nombre: 'Carlos', apellido: 'Fernández', mesa: 8 },
-    { nombre: 'María', apellido: 'Rodríguez', mesa: 12 } ,
-    { nombre: 'Luis', apellido: 'Hernández', mesa: 7 },
-    { nombre: 'Sara', apellido: 'Martínez', mesa: 1 },
-    { nombre: 'Pedro', apellido: 'García', mesa: 9 },
-    { nombre: 'Lucía', apellido: 'Gutiérrez', mesa: 4 },
-    { nombre: 'Manuel', apellido: 'Torres', mesa: 10 },
-    { nombre: 'Elena', apellido: 'Jiménez', mesa: 2 },
-    { nombre: 'Gabriel', apellido: 'Krawiec', mesa: 6 },
-    { nombre: 'Karina', apellido: 'Auday', mesa: 11 }
+class Invitado {
+    constructor(nombre, apellido, nroMesa) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.nroMesa = nroMesa;
+    }
+}
+
+const invitados = [
+    new Invitado('Juan', 'Perez', 5),
+    new Invitado('Ana', 'Gómez', 3),
+    new Invitado('Carlos', 'Fernández', 8),
+    new Invitado('María', 'Rodríguez', 12),
+    new Invitado('Luis', 'Hernández', 7),
+    new Invitado('Sara', 'Martínez', 1),
+    new Invitado('Pedro', 'García', 9),
+    new Invitado('Lucía', 'Gutiérrez', 4),
+    new Invitado('Manuel', 'Torres', 10),
+    new Invitado('Elena', 'Jiménez', 2),
+    new Invitado('Gabriel', 'Krawiec', 6),
+    new Invitado('Karina', 'Auday', 11)
 ];
 
-document.getElementById('mesaForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+function buscarMesa() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellido = document.getElementById('apellido').value.trim();
+    const resultado = document.getElementById('resultado');
     
-    const nombreInput = document.getElementById('nombre').value.toLowerCase().trim();
-    const apellidoInput = document.getElementById('apellido').value.toLowerCase().trim();
+    // Limpia el resultado anterior
+    resultado.classList.remove('error');
     
-    // Validar si los campos están vacíos
-    if (!nombreInput || !apellidoInput) {
-        document.getElementById('resultado').textContent = 'Por favor, complete ambos campos.';
-        return;
-    }
-
-    const resultado = mesas.find(mesa => 
-        mesa.nombre.toLowerCase() === nombreInput && mesa.apellido.toLowerCase() === apellidoInput
+    const invitadoEncontrado = invitados.find(inv => 
+        inv.nombre.toLowerCase() === nombre.toLowerCase() &&
+        inv.apellido.toLowerCase() === apellido.toLowerCase()
     );
 
-    const resultadoDiv = document.getElementById('resultado');
-
-    if (resultado) {
-        resultadoDiv.textContent = `Mesa asignada: ${resultado.mesa}`;
+    if (invitadoEncontrado) {
+        resultado.textContent = `Ud. está en la mesa número ${invitadoEncontrado.nroMesa}`;
     } else {
-        resultadoDiv.textContent = 'No se encontró mesa asignada para ese nombre y apellido.';
+        resultado.classList.add('error'); // Agrega clase de error
+        resultado.textContent = 'No se encontró a este invitado.';
     }
-});
+}

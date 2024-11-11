@@ -28,7 +28,7 @@
     // Mesa 5
     { nombre: 'Karina', apellido: 'Auday', mesa: 5 },
     { nombre: 'Shirel', apellido: 'Krawiec', mesa: 5 },
-    { nombre: 'Esther', apellido: 'Auday', mesa: 5 },
+    { nombre: 'Esther', apellido: 'Benmaman', mesa: 5 },
     { nombre: 'Esty', apellido: 'Auday', mesa: 5 },
     { nombre: 'Vanina', apellido: 'Auday', mesa: 5 },
     { nombre: 'Rosalinda', apellido: 'Salama', mesa: 5 },

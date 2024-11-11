@@ -145,7 +145,7 @@ document.getElementById('mesaForm')?.addEventListener('submit', function (e) {
     const nombreInput = document.getElementById('nombre').value.toLowerCase().trim();
     const apellidoInput = document.getElementById('apellido').value.toLowerCase().trim();
 
-    // Validar si el campo nombre o apellido está vacío
+    // Validar si al menos uno de los campos está completo
     if (!nombreInput && !apellidoInput) {
         document.getElementById('resultado').textContent = 'Por favor, complete al menos uno de los campos (nombre o apellido).';
         return;
@@ -156,10 +156,15 @@ document.getElementById('mesaForm')?.addEventListener('submit', function (e) {
         // Crear la cadena concatenada de nombre y apellido
         const nombreCompleto = (mesa.nombre + " " + mesa.apellido).toLowerCase();
 
-        // Verificar si el nombre, apellido o nombre completo coincide exacta con la entrada
-        return (nombreInput && mesa.nombre.toLowerCase() === nombreInput) ||
-            (apellidoInput && mesa.apellido.toLowerCase() === apellidoInput) ||
-            (nombreInput && apellidoInput && nombreCompleto === (nombreInput + " " + apellidoInput));
+        // Verificar si el nombre, apellido o nombre completo coincide con la entrada
+        if (nombreInput && apellidoInput) {
+            // Buscar por nombre y apellido concatenados
+            return nombreCompleto === (nombreInput + " " + apellidoInput);
+        } else {
+            // Buscar por nombre o apellido por separado
+            return (nombreInput && mesa.nombre.toLowerCase() === nombreInput) ||
+                (apellidoInput && mesa.apellido.toLowerCase() === apellidoInput);
+        }
     });
 
     const resultadoDiv = document.getElementById('resultado');
@@ -174,7 +179,6 @@ document.getElementById('mesaForm')?.addEventListener('submit', function (e) {
         resultadoDiv.textContent = 'No se encontró mesa asignada para ese nombre o apellido.';
     }
 });
-
 window.addEventListener('DOMContentLoaded', function () {
     generarTablaMesas();
 });

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Completo de Mesas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Listado Completo de Mesas</h2>
+
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Mesa</th>
+                </tr>
+            </thead>
+            <tbody id="tablaMesas">
+                <!-- Filas generadas por JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Cargar el archivo script.js que contiene la lógica -->
+    <script src="script.js"></script>
+
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        window.addEventListener('DOMContentLoaded', function () {
+            // Generar la tabla de mesas usando la función de script.js
+            generarTablaMesas();
+        });
+    </script>
+</body>
+</html>
+

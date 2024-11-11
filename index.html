@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Mesas</title>
+    <title>Consulta de Mesas.</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Consulta de Mesas</h1>
+        <h1>Consulta de Mesas </h1>
+        <h2>Ingrese su Nombre y/o Apellido</h2>
         <form id="mesaForm">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" >
             <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido" >
             <button type="submit">Consultar Mesa</button>
         </form>
-        <div id="resultado"></div>
+        <div id="resultado" class="alert" role="alert"></div>
+
+        <!-- Enlace agregado debajo del formulario -->
+        <hr />
+        <p>
+            ¿No encuentras tu mesa?
+            <a href="listMesas.html">Ver listado completo de las mesas</a>
+        </p>
     </div>
     <script src="script.js"></script>
 </body>

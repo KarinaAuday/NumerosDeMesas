@@ -97,7 +97,11 @@
 
       { nombre: 'David', apellido: 'Entebi', mesa: 2 },
       { nombre: 'Mati', apellido: 'Milstein', mesa: 2 },
-      { nombre: 'Nacho', apellido: 'Segalis', mesa: 2 }
+      { nombre: 'Nacho', apellido: 'Segalis', mesa: 2 },
+      { nombre: 'Matias', apellido: 'Auday', mesa: 2 },
+      { nombre: 'Elias', apellido: 'Auday', mesa: 2 },
+      { nombre: 'Tobias', apellido: 'Auday', mesa: 2 },
+      { nombre: 'David', apellido: 'Krawiec', mesa: 2 }
 
      //mesa 6 , 8 y 12 a disposicion de los amigos
     
@@ -176,7 +180,7 @@ document.getElementById('mesaForm')?.addEventListener('submit', function (e) {
         ).join('');
     } else {
         // Si no se encontró ningún resultado
-        resultadoDiv.textContent = 'No se encontró mesa asignada para ese nombre o apellido.';
+        resultadoDiv.textContent = 'Por favor Consultar a los Novios';
     }
 });
 window.addEventListener('DOMContentLoaded', function () {

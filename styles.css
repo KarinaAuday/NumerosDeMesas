@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     display: block; /* Cambiar de flex a bloque */
     min-height: 100vh; /* Asegura que el body ocupe toda la altura disponible */
-    background-image: url('img/civil2.jpg');
+    background-image: url('img/meligabi.jpeg');
     background-size: contain; /* Ajusta la imagen para que se vea completamente */
     background-position: center center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat;
@@ -66,7 +66,13 @@ input {
     input::placeholder {
         color: #aaa;
     }
-
+.alerta {
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
 button {
     width: 100%; /* Asegura que el botón ocupe todo el ancho */
     padding: 10px;

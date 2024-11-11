@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     display: block; /* Cambiar de flex a bloque */
     min-height: 100vh; /* Asegura que el body ocupe toda la altura disponible */
-    background-image: url('img/civil.jpg');
+    background-image: url('img/civil2.jpg');
     background-size: contain; /* Ajusta la imagen para que se vea completamente */
     background-position: center center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat;

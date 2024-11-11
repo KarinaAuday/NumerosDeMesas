@@ -142,12 +142,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('img/civil2.jpg'); /* Cambia el camino según la ubicación de tu imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-image: url('img/civil.jpg');
+    background-size: contain; /* Ajusta la imagen para que se vea completamente */
     background-position: center center; /* Centra la imagen en el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
-    color: white; /* Cambia el color del texto para que contraste con el fondo */
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
 }
 
 .container {

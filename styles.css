@@ -12,7 +12,7 @@ body {
     min-height: 100vh; /* Asegura que el body ocupe toda la altura disponible */
     background-image: url('img/meligabi.jpeg');
     background-size: contain; /* Ajusta la imagen para que se vea completamente */
-    background-position: center center; /* Centra la imagen en el fondo */
+    background-position: center top; /* Centra la imagen en el fondo */
     background-repeat: no-repeat;
     overflow-x: hidden; /* Evita barras de desplazamiento horizontales */
     color: white;
@@ -107,12 +107,12 @@ p {
     font-size: 0.9rem;
 }
 p a {
-        color: darkcyan; /* Cambia el color del enlace */
+        color: cyan; /* Cambia el color del enlace */
         text-decoration: none;
     }
 
  p a:hover {
-            color: cyan; /* Cambia el color al pasar el mouse */
+            color: lightblue; /* Cambia el color al pasar el mouse */
             text-decoration: underline;
         }
 

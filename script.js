@@ -377,7 +377,7 @@ document.getElementById('mesaForm')?.addEventListener('submit', function (e) {
         ).join('');
     } else {
         // Si no se encontró ningún resultado
-        resultadoDiv.textContent = 'Por favor Consultar en lista impresa o link de lista completa';
+        resultadoDiv.textContent = 'Por favor Consultar con personal de organización';
     }
 });
 window.addEventListener('DOMContentLoaded', function () {
